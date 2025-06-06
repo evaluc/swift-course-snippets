@@ -1,0 +1,5 @@
+import Cocoa
+
+let tempC = 30.0
+let tempF = (tempC * 9 / 5 + 32)
+print("\(tempC)° Celsius is equal to \(tempF)° Fahrenheit")
