@@ -1,0 +1,9 @@
+import Cocoa
+
+let fruits = ["apple", "orange", "mango", "papaya", "cherry", "strawberry", "apple"]
+print(fruits.count)
+let fruitSet = Set(fruits)
+print(fruitSet.count)
+
+//Testing this formatting, which works
+print(Set(fruits).count)
