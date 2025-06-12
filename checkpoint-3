@@ -1,0 +1,32 @@
+import Cocoa
+
+//This right here's a FizzBuzz
+
+for i in 1...100 {
+    if i.isMultiple(of: 3) && i.isMultiple(of: 5) {
+        print("FizzBuzz")
+    } else if i.isMultiple(of: 3) && !i.isMultiple(of: 5) {
+        print("Fizz")
+    } else if i.isMultiple(of: 5) && !i.isMultiple(of: 3) {
+        print("Buzz")
+    } else {
+        print(i)
+    }
+}
+
+ /* Alternate solution that's likely slight more efficient - does checks once
+
+for i in 1...100 {
+    switch (i.isMultiple(of: 3), i.isMultiple(of: 5)) {
+    case (true, true):
+        print("FizzBuzz")
+    case (true, false):
+        print("Fizz")
+    case (false, true):
+        print("Buzz")
+    case (false, false):
+        print(i)
+    }
+}
+
+*/
