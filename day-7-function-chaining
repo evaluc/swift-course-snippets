@@ -1,0 +1,8 @@
+import Cocoa
+
+func stringCompare (string1: String, string2: String) -> Bool {
+    return  string1.uppercased().sorted() == string2.uppercased().sorted()
+}
+
+print(stringCompare(string1: "orange", string2: "orange"))
+
