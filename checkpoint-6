@@ -1,0 +1,41 @@
+import Cocoa
+
+/*
+Prompt:
+
+Create a struct to store information about a car, including its model, number of seats, and current gear, then add a method to change gears up or down. 
+Have a think about variables and access control: what data should be a variable rather than a constant, and what data should be exposed publicly? 
+Should the gear-changing method validate its input somehow?
+
+*/
+
+struct Car {
+    let model: String
+    let seats: Int
+    private(set) var currentGear = 1
+
+    init(model: String, seats: Int) {
+        self.model = model
+        self.seats = seats
+        self.currentGear = Int.random(in: 1...10)
+    }
+
+    // Possibly better represented as an enum? Drive, Reverse, Neutral, Park, Error/Failure State?
+    // Or even just the limited range represented as an enum? Since additional gear cases won't be added later presumably
+    // How much effort do I want to put in adding error checking beyond upper/lower limits?
+    // e.g. Error if trying to increment by more than one
+    // Perhaps overthinking this
+
+    mutating func shiftGearUp()
+
+        didSet {
+            print("Shifted up to \(currentGear)")
+        }
+
+    mutating func shiftGearDown()
+        
+        didSet {
+            print("Shifted down to \(currentGear)")
+        }
+
+}
